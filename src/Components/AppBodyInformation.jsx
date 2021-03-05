@@ -40,9 +40,13 @@ class AppBodyInformation extends React.Component {
         <AppBodyPlaceholders />
         <hr className="featurette-divider"></hr>
         {this.state.contents.map((content) => {
-          return <AppBodyContent content={content} />;
+          return (
+            <>
+              <AppBodyContent content={content} />
+              <hr className="featurette-divider"></hr>
+            </>
+          );
         })}
-        <hr className="featurette-divider"></hr>
       </div>
     );
   }
